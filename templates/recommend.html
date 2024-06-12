@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title%}
+Explore
+{% endblock %}
+{% block content %}
+<main>
+    <section class="explore-hero">
+        <h1>Explore New Music</h1>
+        <p>Discover new artists, tracks, and genres tailored to your taste.</p>
+    </section>
+    <br>
+
+    <section class="search-bar">
+        <form action="/search" method="post">
+            <input type="text" name="query" placeholder="Search for songs, artists, or albums">
+            <button type="submit">Search</button>
+        </form>
+    </section>
+    <section class="popular-tracks">
+        <h2>Popular Tracks</h2>
+        <div class="track-list">
+            <!-- Repeat this block for each track -->
+            <div class="track-item">
+                <img src="/static/images/afro.jpg" alt="Track Cover">
+                <div class="track-info">
+                    <h3>Neo Miles</h3>
+                    <p>Afro</p>
+                </div>
+            </div>
+            <!-- End of track block -->
+        </div>
+    </section>
+
+    <section class="genres">
+        <h2>Explore by Genre</h2>
+        <div class="genre-list">
+            <!-- Repeat this block for each genre -->
+            <div class="genre-item">
+                <img src="/static/images/hiphop.jpg" alt="Genre Image">
+                <h3>HipHop</h3>
+            </div>
+            <!-- End of genre block -->
+        </div>
+    </section>
+
+    <section class="new-releases">
+        <h2>New Releases</h2>
+        <div class="release-list">
+            <!-- Repeat this block for each release -->
+            <div class="release-item">
+                <img src="/static/images/pop.jpg" alt="Release Cover">
+                <div class="release-info">
+                    <h3>Sayona/Mount Spiral</h3>
+                    <p>Palm Rapeseed</p>
+                </div>
+            </div>
+            <!-- End of release block -->
+        </div>
+    </section>
+</main>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Liked{% endblock %}
+{% block content %}
+<main>
+    <section class="liked-songs">
+        <h2>Liked Songs</h2>
+        <div id="LikedSongsContainer">
+            {% if liked_songs.empty %}
+            <p>You have no favorite songs.</p>
+            {% else %}
+            {% for index, row in liked_songs.iterrows() %}
+            <div class="song-item">
+                <h3><a href="{{ url_for('song_detail', song_id=row['song_id']) }}">{{ row['song_name'] }}</a> <i
+                        class="fas fa-heart" style="color: red;"></i></h3>
+                <p>Genre: {{ row['genre']}}</p>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+</main>
+{% endblock %}

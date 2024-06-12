@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+{{ super() }}
+<section class="hero">
+    <h1>Discover your next favorite song</h1>
+    <p>Get personalized music recommendations based on your preferences.</p>
+    <a href="{{ url_for('recommend') }}" class="btn">Explore Music</a>
+</section>
+<section class="introduction">
+    <h2>About Us</h2>
+    <p>We provide music recommendations that match your unique taste. Our system analyzes your liked songs to
+        suggest new music you'll love.</p>
+</section>
+<section class="features">
+    <h2>Key Features</h2>
+    <div class="feature-item">
+        <h3>Personalized Recommendations</h3>
+        <p>Get suggestions tailored to your musical preferences.</p>
+    </div>
+    <div class="feature-item">
+        <h3>Discover New Music</h3>
+        <p>Explore new artists and genres based on your listening habits.</p>
+    </div>
+    <div class="feature-item">
+        <h3>Easy to Use</h3>
+        <p>Simple and intuitive interface to find your next favorite song.</p>
+    </div>
+</section>
+<section class="testimonials">
+    <h2>What Our Users Say</h2>
+    <blockquote>
+        <p>"This is the best music recommendation service I've ever used!"</p>
+        <cite>- Happy User</cite>
+    </blockquote>
+    <blockquote>
+        <p>"I love discovering new music every day, thanks to this platform."</p>
+        <cite>- Music Lover</cite>
+    </blockquote>
+</section>
+{% endblock content %}

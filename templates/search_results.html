@@ -1,0 +1,29 @@
+{% extends "recommend.html" %}
+{% block title%}
+{{ query }}
+{% endblock %}
+{% block content %}
+
+<main>
+    <section class="search-results">
+        <h2>Search results for "{{ query }}"</h2>
+        <div id="resultsContainer">
+            {% if error %}
+            <p>{{ error }}</p>
+            {% elif results is not none %}
+            {% if results.empty %}
+            <p>No results found!</p>
+            {% else %}
+            {% for index, row in results.iterrows() %}
+            <div class="song-item">
+                <h3><a href="{{ url_for('song_detail', song_id=row['song_id']) }}">{{ row['song_name'] }}</a></h3>
+                <p>Genre: {{ row['genre'] }}</p>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endif %}
+        </div>
+    </section>
+</main>
+
+{% endblock %}

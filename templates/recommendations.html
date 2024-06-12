@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title%}
+Recommended
+{% endblock %}
+{% block content %}
+<main>
+    <section class="recommendations">
+        <h1>Recommended Songs</h1>
+        <br>
+        <div id="resultsContainer">
+            {% if error %}
+            <p>{{ error }}</p>
+            {% elif recommended_songs is none %}
+            <p>No recommendations available</p>
+            {% else %}
+            {% for index, row in recommended_songs.iterrows() %}
+            <div class="song-item">
+                <h3><a href="{{ url_for('song_detail', song_id = row['song_id']) }}" style="text-decoration: none;">{{ row['song_name'] }} </a><i class="fas fa-heart"></i>
+                </h3>
+                <p>Genre: {{ row['genre'] }}</p>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+</main>
+{% endblock %}

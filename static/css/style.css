@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* header styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    margin-left: 20px;
+}
+header .logo a {
+    text-decoration: none;
+    color: #f4f4f4;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 30px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #f60;
+}
+
+header .cta-buttons {
+    margin-right: 40px;
+}
+
+header .cta-buttons .btn {
+    background: #f60;
+    color: #fff;
+    padding: 12px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+/* Hero Section Styling */
+.hero {
+    background: url(/static/images/bg.jpg) no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    margin-top: 70px;
+    font-size: 2.5rem;
+
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background: #f60;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.explore-hero {
+    background: url('/static/images/explore.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.explore-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.explore-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Search bar styling*/
+.search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: large;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: large;
+}
+
+.search-bar button:hover {
+    background: #f60;
+}
+
+.popular-tracks, .genres, .new-releases {
+    padding: 40px 20px;
+    background: #fff;
+    margin: 20px 0;
+}
+
+.popular-tracks h2, .genres h2, .new-releases h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.track-list, .genre-list, .release-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.track-item, .genre-item, .release-item {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.track-item img, .genre-item img, .release-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.track-info, .release-info {
+    margin-top: 10px;
+}
+
+/* Section Styling */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+.introduction,
+.features,
+.testimonials,
+.blog,
+.newsletter {
+    background: #efe4e4;
+    margin: 20px 0;
+}
+
+.features .feature-item,
+.testimonials blockquote,
+.blog article {
+    margin-bottom: 20px;
+}
+
+.features .feature-item h3 {
+    margin-bottom: 10px;
+}
+
+/* Search results styling */
+.search-results, .liked-songs {
+    padding: 40px;
+    background: #fff;
+    margin: 20px 0;
+}
+
+.search-results h2, .liked-songs h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#resultsContainer, #likedSongsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.song-item {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 10px; 
+}
+
+.song-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.song-item p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+/* Song detail styling */
+.song-detail {
+    padding: 40px 20px;
+    background: #fff;
+    margin: 20px 0;
+    text-align: center;
+    height: 900px;
+}
+
+.song-detail h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.song-detail p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.song-detail audio {
+    margin: 20px 0;
+}
+
+.like-dislike-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.like-dislike-buttons .btn {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.like-dislike-buttons .btn:hover {
+    background: #f60;
+}
+
+/* Liked songs section */
+.liked-songs {
+    padding: 40px 20px;
+    background: #fff;
+    margin: 20px 0;
+    text-align: center;
+    height: 900px;
+}
+
+.liked-songs h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* recommendations */
+.recommendations {
+    height: 920px;
+}
+
+/* footer styling */
+footer {
+    bottom: 0;
+    position: relative;
+    width: 100%;
+}
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    display: inline-flex;
+    margin: 5px;
+}
+
+.social-media li {
+    margin-right: 10px;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}

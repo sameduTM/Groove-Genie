@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}
+{{ song['song_name'] }}
+{% endblock %}
+{% block content %}
+<main>
+    <section class="song-detail">
+        <h1>{{ song['song_name'] }} 
+            {% if is_liked %}
+            <i class="fas fa-heart" style="color: red;"></i>
+            {% elif is_disliked %}
+            <i class="fas fa-heart" style="color: white"></i>
+            {% endif %}
+        <p>{{ song['genre'] }}</p>
+        <audio controls>
+            <source src="/static/audio/J. Cole _ 7 Minute Drill.mp3" type="audio/mpeg">
+            Your browser does not support audio element.
+        </audio>
+        <div class="like-dislike-buttons">
+            <a href="{{ url_for('like_song', song_id=song['song_id']) }}" class="btn">Like</a>
+            <a href="{{ url_for('dislike_song', song_id=song['song_id']) }}" class="btn">Dislike</a>
+        </div>
+    </section>
+</main>
+
+{% endblock %}
